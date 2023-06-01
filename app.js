@@ -2,16 +2,22 @@ const express = require('express');
 const app = express();
 
 
+//* mongodb connection
+const dbConnection = require('./models/connection')
+dbConnection()
+
+//* view engine ejs
+
+app.set ('view engine', 'ejs')
 
 
-const path = require('path')
+//* public - static
 app.use(express.static('public'));
 
-//routes
+//* routes
 const index = require('./routes/index')
-const addPost = require('./routes/addPost')
-const posts = require('./routes/posts')
-
+const addPost = require('./routes/addBlog')
+const posts = require('./routes/blogs')
 
 app.use(index)
 app.use(addPost)
