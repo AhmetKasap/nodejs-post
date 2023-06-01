@@ -23,27 +23,19 @@
     </div>
   </nav>
 
+   
+  
+
 
   <div class="w-50 mx-auto">
-    <div class="cardd">
-      <h1 class="text-center">Title</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci itaque asperiores distinctio iste. Veniam
-        velit amet vitae quam dolores cupiditate, laborum natus fuga magni laboriosam repellendus dolorem earum. Tempora
-        iure doloremque rerum molestiae magni ipsa delectus. Natus in nisi voluptates ipsum doloribus, repellendus
-        provident. Reprehenderit minus veniam iure deleniti cum.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptatibus quaerat incidunt quas, expedita
-        velit, excepturi exercitationem repellendus laborum officia atque. Dolorum, ipsa inventore. Amet ab, maxime illo
-        quidem eaque voluptate velit cum porro dignissimos, dolorum accusantium explicabo eos minus nesciunt in
-        doloribus tempore repellat eum quas magnam voluptates blanditiis earum officia natus. Reprehenderit veniam
-        ratione nam vel, vero ex modi accusantium ad illo minima tempora quod fuga minus saepe sequi eligendi doloribus
-        adipisci commodi, officia incidunt quaerat quae, dolorum et optio. Dignissimos necessitatibus doloribus officia
-        dolorum pariatur voluptatibus ullam deleniti cumque aspernatur, tempore, libero at debitis fugiat dolore nam.
-      </p>
-      <a href="#" class=" btn-outline-primary">Devamını Oku</a>
-
-    </div>
+    <% data.map((result, index) => { %>
+      <div class="cardd">
+        <h1 class="text-center"> <%=result.title%> </h1>
+        <p> <%=result.content%> </p>
+        <a href="#" class=" btn-outline-primary">Devamını Oku</a>
+      </div>
+    <% })%>
     
-
   </div>
 
 

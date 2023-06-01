@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');   
 
+
+
+//* veriler pars edilebilir.
+app.use(bodyParser.urlencoded({extended:false}));  
 
 //* mongodb connection
 const dbConnection = require('./models/connection')
