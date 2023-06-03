@@ -17,7 +17,6 @@ dbConnection()
 
 app.set ('view engine', 'ejs')
 
-
 //* public - static
 app.use(express.static('public'));
 
