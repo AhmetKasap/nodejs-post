@@ -14,9 +14,9 @@ router.post('/takePost', (req,res) => {
     added_post.save()
 
     res.redirect('/posts')
-
-
 })
+
+
 
 
 

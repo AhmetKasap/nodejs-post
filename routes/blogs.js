@@ -6,11 +6,20 @@ const Blog = require('../models/Blog')
 
 router.get('/posts',  (req,res) =>{
     
-    const blog = new Blog()
     Blog.find().then(data => {
         res.render('blogs', {data : data})
     })
     
+})
+
+router.get('/delete/:id', (req,res) => {  
+
+    const id = req.params.id 
+    
+    Blog.findByIdAndDelete(id)
+    .then(e=>{
+        res.redirect('/posts')
+    })
 })
 
 

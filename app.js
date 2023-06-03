@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');   
+const methodOverride = require('method-override');
+
 
 
 
@@ -27,6 +29,9 @@ const posts = require('./routes/blogs')
 app.use(index)
 app.use(addPost)
 app.use(posts)
+
+app.use(methodOverride('_method'))
+
 
 
 app.listen(3000);
