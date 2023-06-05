@@ -1,29 +1,14 @@
 const express = require('express')
 const router = express.Router()
 
-const Blog = require('../models/Blog')
+//* controllers import
+const adminBlog = require('../controllers/adminBlog')
 
+//* controllers function import 
+router.get('/posts', adminBlog.renderBlogs)       //* render blogs page 
+router.get('/addPosts',adminBlog.renderAddBlog)   //* render addBlog page
 
-router.get('/posts',  (req,res) =>{
-    
-    Blog.find().then(data => {
-        res.render('blogs', {data : data})
-    })
-    
-})
-
-router.get('/delete/:id', (req,res) => {  
-
-    const id = req.params.id 
-    
-    Blog.findByIdAndDelete(id)
-    .then(e=>{
-        res.redirect('/posts')
-    })
-})
-
-
-
-
+router.post('/takePost', adminBlog.saveBlogPost)  //* save blog 
+router.get('/delete/:id', adminBlog.deleteBlog)   //* delete blog
 
 module.exports=router

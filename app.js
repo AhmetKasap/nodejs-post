@@ -22,11 +22,9 @@ app.use(express.static('public'));
 
 //* routes
 const index = require('./routes/index')
-const addPost = require('./routes/addBlog')
 const posts = require('./routes/blogs')
 
 app.use(index)
-app.use(addPost)
 app.use(posts)
 
 app.use(methodOverride('_method'))
