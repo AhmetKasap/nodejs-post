@@ -1,5 +1,5 @@
 function conectionDb() {
-    const url = "mongodb+srv://ahmetkasap:ahmetk123@nodejs.46q0jcs.mongodb.net/"
+    const url = "mongodb+srv://ahmetkaasap:akasap123@mongo.fxccxnb.mongodb.net/"
     const mongoose = require('mongoose')    
     mongoose.connect(url)
         .then(res => {
@@ -13,3 +13,4 @@ function conectionDb() {
 
 
 module.exports = conectionDb
+
